@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saniae - Illustrator & UX/UI Designer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Tsukimi+Rounded&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg rounded-bottom mx-auto">
+        <div class="container container-nav">
+            <div class="container-nav-left">
+                <a class="btn btn-shop btn-dark my-radius-btn" href="shop.html">SHOP</a>
+
+                <div class="nav-logo">
+                    <img class=rounded-bottom nav-logo src="images/nav_bar_logo.webp"
+                        alt="Portrait of the artist with a yellowish background.">
+                </div>
+
+                <a class="navbar-brand" href="index.html">saniae</a>
+                <!--Après une certaine bataille j'ai réussi à bricoler l'alignement à la gauche mais sans réussir à gérer
+                les padding/margin top et bottom pour que le logo touche le haut et que le reste soit centré avec les éléments
+                de la droite... J'ai choisi le responsive en priorité...-->
+            </div>
+
+            <button class="navbar-dark navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="container">
+                <div class="collapse navbar-collapse" id="nav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="illustrations.html">ILLUSTRATIONS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="workflow.html">WORKFLOW</a></li>
+                        <li class="nav-item"><button data-bs-toggle="modal" data-bs-target="#modalContact"
+                                class="btn btn-nav btn-dark my-radius-btn" href="#">CONTACT</button>
+                        </li>
+                        <!--Le bouton "contact" n'agit pas en hover comme le bouton "shop" sur la navbar, je ne sais pas pourquoi et ce malgré
+                    être allé voir dans l'inspecteur sur navigateur... Probablement parce que c'est un "nav-item" ?-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+    </main>
+
+    <footer class="footer rounded-top mx-auto">
+        <div class="container-footer row">
+            <div class="container-footer-links">
+                <li class="footer-item"><a class="footer-link-title" href="shop.html">SHOP</a></li>
+                <li class="footer-item "><a class="footer-link" href="faq.html">FAQ</a></li>
+                <li class="footer-item"><a class="footer-link" href="shipping.html">Shipping</a></li>
+                <li class="footer-item"><a class="footer-link" href="terms_and_conditions.html">Terms &
+                        Conditions</a></li>
+            </div>
+
+            <div class="btn-mailto">
+                <a class="btn btn-mailto btn-light my-radius-btn"
+                    href="mailto:saniae.illustration@outlook.com">saniae.illustration@outlook.com</a>
+            </div>
+
+            <div class="p-light">© Saniae - Armand Flores 2026
+            </div>
+        </div>
+
+        <div class="container-footer-lg">
+            <div class="row">
+                <div class="col-7 quote">
+                    <p><span style="color: #f8d64a">"</span>
+                        when the
+                        <span style="color: #f8d64a">help </span>
+                        comes
+                    </p>
+                    <p> in many forms...
+                        <span style="color: #f8d64a">"</span>
+                    </p>
+                </div>
+                <!--Utilisation EXCEPTIONNELLE de style dans le fichier html-->
+
+                <div class="col-3">
+                    <li class="footer-item"><a class="footer-link-title" href="shop.html">SHOP</a></li>
+                    <li class="footer-item"><a class="footer-link" href="faq.html">FAQ</a></li>
+                    <li class="footer-item"><a class="footer-link" href="shipping.html">Shipping</a></li>
+                    <li class="footer-item"><a class="footer-link" href="terms_and_conditions.html">Terms &
+                            Conditions</a></li>
+                </div>
+
+                <div class="col-2">
+                    <li class="footer-item"><a class="footer-link-title" href="index.html">PORTOFLIO</a></li>
+                    <li class="footer-item"><a class="footer-link" href="illustrations.html">Illustrations</a>
+                    </li>
+                    <li class="footer-item"><a class="footer-link" href="workflow.html">Worklow</a></li>
+                    <li class="footer-item"><a class="footer-link" href="">Contact</a></li>
+                </div>
+            </div>
+
+            <div class="btn-mailto-lg">
+                <a class="btn btn-mailto-lg btn-light my-radius-btn"
+                    href="mailto:saniae.illustration@outlook.com">saniae.illustration@outlook.com</a>
+            </div>
+
+            <div class="p-light-lg">© Saniae - Armand Flores 2026
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="modalContact">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Oh, hi. Contact me!</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div id="alertOk" class="alert alert-dark d-none">
+                        Thank you for your message ~
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label-primary">Your name</label>
+                        <input type="text" class="form-control form-control-primary" placeholder="Your name here" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label-tertiary">Email</label>
+                        <input type="email" class="form-control form-control-tertiary" placeholder="yourname@exemple.com" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-control" rows="4" required></textarea>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button data-bs-dismiss="modal" class="btn btn-primary-title">Cancel</button>
+                    <button class="btn btn-dark-title"
+                        onclick="document.getElementById('alertOk').classList.remove('d-none')">
+                        Send
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    </script>
+</body>
+
+</html>

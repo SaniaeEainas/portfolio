@@ -1,0 +1,309 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-top: 0%;
+    padding-bottom: 0.2%;
+    background-color: var(--my-light);
+    width: 95vw;
+}
+
+.navbar-toggler {
+    background-color: var(--my-dark);
+    border-radius: var(--my-radius-btn);
+}
+
+.container {
+    display:flex;
+    flex-direction: row;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    max-width: 95vw;
+}
+
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.25rem;
+    max-width: 95vw;
+}
+
+.container-nav-left {
+    display: flex;
+    align-items: flex-start;
+    justify-content:flex-start;
+    text-align: center;
+    justify-content: center;
+    max-width: 95vw;
+}
+
+
+.navbar-brand {
+    font-family: 'DynaPuff';
+    font-size: 2rem;
+    align-items: center;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    margin-left: 8px
+}
+
+.nav-item {
+    font-family: 'DynaPuff';
+    font-size: 1.2rem;
+}
+
+.nav-item .nav-link.active {
+    color: var(--my-light);
+    background-color: var(--my-primary);
+    border-radius: var(--my-radius-btn);
+}
+
+.btn-nav {
+    font-family: 'DynaPuff';
+    font-size: 1.2rem;
+    color: var(--my-light);
+    background-color: var(--my-dark);
+    border-radius: var(--my-radius-btn);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.btn-shop {
+    font-family: 'DynaPuff';
+    font-size: 1.2rem;
+    text-align: center;
+    align-content: center;
+    color: var(--my-light);
+    background-color: var(--my-dark);
+    border-radius: var(--my-radius-btn);
+    border: none;
+    padding: 8px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.nav-logo img {
+    display: flex;
+    align-content: flex-start;
+    padding-top: 0%;
+    max-height: 50px;
+}
+
+.spirals img {
+    position:absolute;
+    color: var(--my-secondary);
+    max-height: 50px;
+}
+
+.navbar-toggler{
+    margin-right: 1rem;
+}
+
+body {
+    background-image: url("/images/home_background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/*J'ai voulu désactiver la responsiveness de l'image pour qu'elle soit à une certaine taille qu'importe la fenêtre
+mais je n'ai pas réussi. J'ai essayé des media queries et des breakpoints pour chaque format mais en vain...*/
+
+li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+/*Pour retirer les "bullets" des listes*/
+
+.footer {
+    margin-top: 2rem;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    background-color: var(--my-dark);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+}
+/*Impossible de garder le footer en 95vw comme la navbar ET fixé en bas de la page... Si je le laissais en 95vw, il démarrait de la position
+"0" en bas à gauche de l'écran (non centré donc). J'ai donc décidé qu'il valait mieux qu'il soit centré sans margin...*/
+
+.container-footer {
+    display: none
+}
+
+@media (max-width: 992px) {
+    .container-footer {
+        display: block;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.container-footer-lg {
+    display: none
+}
+
+@media (min-width: 992px) {
+    .container-footer-lg {
+        display: block;
+        margin-right: 3rem;;
+    }
+}
+
+.container-footer-links {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.footer-item {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.footer-link-title {
+    font-family: 'DynaPuff';
+    font-size: 1.2rem;
+    color: var(--my-light);
+    text-decoration: none;
+}
+
+.footer-link {
+    color: var(--my-light);
+    text-decoration: none;
+}
+
+.row {
+    text-align: right;
+    margin: 1rem;
+}
+
+.quote {
+    font-family: 'DynaPuff';
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    color: var(--my-light);
+}
+
+.btn-mailto {
+    text-align: center;
+    justify-content: center;
+    font-family: 'DynaPuff';
+    font-size: 1.1rem;
+}
+
+.btn-mailto-lg {
+    text-align: right;
+    font-family: 'DynaPuff';
+    font-size: 1.1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.p-light {
+    font-family: 'Tsukimi Rounded';
+    font-size: 0.8rem;
+    color: var(--my-light);
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.p-light-lg {
+    font-family: 'Tsukimi Rounded';
+    font-size: 0.8rem;
+    color: var(--my-light);
+    text-decoration: none;
+    text-align: right;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    margin-right: 2rem
+}
+
+.modal-header {
+    background-color: var(--my-primary);
+    color: var(--my-light);
+    border: none;
+}
+
+.modal-footer {
+    border: none;
+}
+
+.btn-close {
+    color: var(--my-light);
+    background-color: var(--my-light)
+}
+
+.btn-primary-title {
+    font-family:'DynaPuff';
+    background-color: var(--my-primary);
+    color: var(--my-light);
+}
+
+.btn-primary-title:hover {
+    font-family:'DynaPuff';
+    border-color: var(--my-primary);
+    background-color: var(--my-light);
+    color: var(--my-primary);
+}
+
+.btn-dark-title {
+    font-family:'DynaPuff';
+    background-color: var(--my-dark);
+    color: var(--my-light);
+}
+
+.btn-dark-title:hover {
+    font-family:'DynaPuff';
+    border-color: var(--my-dark);
+    background-color: var(--my-light);
+    color: var(--my-darkt);
+}
+
+.form-label {
+    font-family: DynaPuff;
+    color: var(--my-dark);
+}
+
+.form-label-tertiary {
+    font-family: DynaPuff;
+    color: var(--my-tertiary);
+}
+
+.form-label-primary{
+    font-family: DynaPuff;
+    color: var(--my-primary);
+}
+
+.form-control {
+    border-color: var(--my-dark);
+}
+
+.form-control:focus {
+    border-color: var(--my-dark);
+    box-shadow: 0 0 0 0.25rem rgb(43, 45, 75, .25);
+}
+
+.form-control-tertiary {
+    border-color: var(--my-tertiary);
+}
+
+.form-control-tertiary:focus {
+    border-color: var(--my-tertiary);
+    box-shadow: 0 0 0 0.25rem rgb(126, 90, 102, .25);
+}
+
+.form-control-primary {
+    border-color: var(--my-primary);
+}
+
+.form-control-primary:focus {
+    border-color: var(--my-primary);
+    box-shadow: 0 0 0 0.25rem rgb(218, 125, 0, .25);
+}
