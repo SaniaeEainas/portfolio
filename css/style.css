@@ -1,4 +1,7 @@
 .navbar {
+    position: fixed;
+    top: 0;
+    align-self: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,7 +18,7 @@
 }
 
 .container {
-    display:flex;
+    display: flex;
     flex-direction: row;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -25,17 +28,18 @@
 .container-nav {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 0.25rem;
+    padding-bottom: 1rem;
     max-width: 95vw;
 }
 
 .container-nav-left {
     display: flex;
-    align-items: flex-start;
-    justify-content:flex-start;
-    text-align: center;
+    align-items: center;
     justify-content: center;
+    text-align: center;
     max-width: 95vw;
+    padding-left: 12px;
+    margin-left: 0.5rem
 }
 
 
@@ -62,6 +66,8 @@
 .btn-nav {
     font-family: 'DynaPuff';
     font-size: 1.2rem;
+    text-align: center;
+    align-content: center;
     color: var(--my-light);
     background-color: var(--my-dark);
     border-radius: var(--my-radius-btn);
@@ -90,13 +96,26 @@
     max-height: 50px;
 }
 
+.card {
+    display: flex;
+    align-content: center;
+    align-self: center;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5.5rem;
+    margin-bottom: 2rem;
+    width: 80vw
+}
+
+
 .spirals img {
-    position:absolute;
+    position: absolute;
     color: var(--my-secondary);
     max-height: 50px;
 }
 
-.navbar-toggler{
+.navbar-toggler {
     margin-right: 1rem;
 }
 
@@ -105,6 +124,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 /*J'ai voulu désactiver la responsiveness de l'image pour qu'elle soit à une certaine taille qu'importe la fenêtre
 mais je n'ai pas réussi. J'ai essayé des media queries et des breakpoints pour chaque format mais en vain...*/
 
@@ -113,20 +133,34 @@ li {
     padding: 0;
     margin: 0;
 }
+
 /*Pour retirer les "bullets" des listes*/
 
+#flex-container {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+
+    min-height: 100svh;
+}
+
+#flex-container>footer {
+    margin-top: auto;
+}
+/*Code un peu particulier que j'ai trouvé dans des docs/forums où en fait je met le viewport en tant que container et je force
+le footer à rester du coup tout en bas du viewport parce que jusqu'à maintenant il était au beau milieu de la page.*/
+
 .footer {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
     margin-top: 2rem;
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     background-color: var(--my-dark);
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    position: fixed;
+    width: 95vw;
 }
-/*Impossible de garder le footer en 95vw comme la navbar ET fixé en bas de la page... Si je le laissais en 95vw, il démarrait de la position
-"0" en bas à gauche de l'écran (non centré donc). J'ai donc décidé qu'il valait mieux qu'il soit centré sans margin...*/
 
 .container-footer {
     display: none
@@ -147,7 +181,8 @@ li {
 @media (min-width: 992px) {
     .container-footer-lg {
         display: block;
-        margin-right: 3rem;;
+        margin-right: 3rem;
+        ;
     }
 }
 
@@ -178,6 +213,7 @@ li {
 
 .row {
     text-align: right;
+    justify-content: right;
     margin: 1rem;
 }
 
@@ -200,7 +236,7 @@ li {
     font-family: 'DynaPuff';
     font-size: 1.1rem;
     margin-left: 1rem;
-    margin-right: 1rem;
+    margin-right: 2rem;
 }
 
 .p-light {
@@ -222,7 +258,7 @@ li {
     text-align: right;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
-    margin-right: 2rem
+    margin-right: 4rem;
 }
 
 .modal-header {
@@ -241,26 +277,26 @@ li {
 }
 
 .btn-primary-title {
-    font-family:'DynaPuff';
+    font-family: 'DynaPuff';
     background-color: var(--my-primary);
     color: var(--my-light);
 }
 
 .btn-primary-title:hover {
-    font-family:'DynaPuff';
+    font-family: 'DynaPuff';
     border-color: var(--my-primary);
     background-color: var(--my-light);
     color: var(--my-primary);
 }
 
 .btn-dark-title {
-    font-family:'DynaPuff';
+    font-family: 'DynaPuff';
     background-color: var(--my-dark);
     color: var(--my-light);
 }
 
 .btn-dark-title:hover {
-    font-family:'DynaPuff';
+    font-family: 'DynaPuff';
     border-color: var(--my-dark);
     background-color: var(--my-light);
     color: var(--my-darkt);
@@ -276,7 +312,7 @@ li {
     color: var(--my-tertiary);
 }
 
-.form-label-primary{
+.form-label-primary {
     font-family: DynaPuff;
     color: var(--my-primary);
 }
